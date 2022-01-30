@@ -7,7 +7,7 @@
 приходит событие с этой сущностью, в дальнейшем ее нужно расширять
 
 1) Получите token от BotFather на своего бота и проставьте в 
-   bot.token в /src/main/resources
+   bot.token в /src/main/resources/application.properties
 2) Установите ngrok c этого сайта https://ngrok.com/download (нужен для тоннелей на локальную машину)
 3) Делаем команду в терминале
    
