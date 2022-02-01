@@ -17,9 +17,14 @@ public class BotConfig {
     @Value("${webhook.url}")
     private String webhookUrl;
 
+    private final RestTemplate restTemplate;
+
+    public BotConfig(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
     @PostConstruct
     void init() {
-        RestTemplate restTemplate = new RestTemplate();
         WebHook webHook = new WebHook().setUrl(webhookUrl);
         ResponseEntity<Object> responseDeleteWebhook = restTemplate
                 .postForEntity(telegramApi+"/deleteWebhook", webHook, Object.class);
