@@ -10,11 +10,18 @@ public class Message {
     @JsonProperty(value = "text")
     private String text;
 
+    @JsonProperty(value = "chat")
+    private Chat chat;
+
     public Integer getId() {
         return id;
     }
 
     public String getText() {
         return text;
+    }
+
+    public Chat getChat() {
+        return chat;
     }
 }
