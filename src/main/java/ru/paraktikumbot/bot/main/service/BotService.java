@@ -19,10 +19,10 @@ public class BotService {
         this.restTemplate = restTemplate;
     }
 
-    public void sendMessage(Integer chat_id, String textToSend) {
+    public void sendMessage(Integer chatId, String textToSend) {
 
         Map<String, String> request = new HashMap<>();
-        request.put("chat_id", String.valueOf(chat_id));
+        request.put("chat_id", String.valueOf(chatId));
         request.put("text", textToSend);
 
         ResponseEntity<String> sendMessage = restTemplate

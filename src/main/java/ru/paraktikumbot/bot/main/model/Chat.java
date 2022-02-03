@@ -5,16 +5,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Chat {
 
     @JsonProperty(value = "id")
-    private Integer chat_id;
+    private Integer chatId;
 
     @JsonProperty(value = "type")
-    private String chat_type;
+    private String chatType;
 
-    public Integer getChat_id() {
-        return chat_id;
+    public Integer getChatId() {
+        return chatId;
     }
 
-    public String getChat_type() {
-        return chat_type;
+    public String getChatType() {
+        return chatType;
     }
 }

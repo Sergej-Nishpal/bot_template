@@ -20,8 +20,8 @@ public class MainController {
     @PostMapping("/")
     public void main(@RequestBody Update update) {
 
-        Integer chat_id = update.getMessage().getChat().getChat_id();
-        botService.sendMessage(chat_id, "Hello, i am bot");
+        Integer chatId = update.getMessage().getChat().getChatId();
+        botService.sendMessage(chatId, "Hello, i am bot");
 
     }
 }

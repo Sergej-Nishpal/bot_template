@@ -5,20 +5,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Message {
 
     @JsonProperty(value = "message_id")
-    private Integer id;
+    private Integer messageId;
 
     @JsonProperty(value = "text")
-    private String text;
+    private String messageText;
 
     @JsonProperty(value = "chat")
     private Chat chat;
 
-    public Integer getId() {
-        return id;
+    public Integer getMessageId() {
+        return messageId;
     }
 
-    public String getText() {
-        return text;
+    public String getMessageText() {
+        return messageText;
     }
 
     public Chat getChat() {
