@@ -13,9 +13,13 @@ public class BotService {
     @Value("${telegram.api}")
     private String telegramApi;
 
-    public void sendMessage(Integer chat_id, String textToSend) {
+    private final RestTemplate restTemplate;
 
-        RestTemplate restTemplate = new RestTemplate();
+    public BotService(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
+    public void sendMessage(Integer chat_id, String textToSend) {
 
         Map<String, String> request = new HashMap<>();
         request.put("chat_id", String.valueOf(chat_id));
